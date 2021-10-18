@@ -15,5 +15,6 @@ from
   ibm_account as acc,
   ibm_iam_api_key as key
 where
-  key.iam_id = acc.owner_guid
-group by ;
+  acc.owner_unique_id = split_part(key.iam_id, '-', 2)
+group by
+  acc.guid;
