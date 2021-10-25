@@ -4,25 +4,70 @@ locals {
   })
 }
 
-locals {
-  cis_v100_6_2_common_tags = merge(local.cis_v100_6_common_tags, {
-    cis_section_id = "6.2"
-  })
-}
-
 benchmark "cis_v100_6" {
   title         = "6 Networking"
   documentation = file("./cis_v100/docs/cis_v100_6.md")
   tags          = local.cis_v100_6_common_tags
   children = [
+    benchmark.cis_v100_6_1,
     benchmark.cis_v100_6_2
   ]
+}
+
+benchmark "cis_v100_6_1" {
+  title         = "6.1 IBM Cloud Internet Services"
+  documentation = file("./cis_v100/docs/cis_v100_6_1.md")
+  tags          = local.cis_v100_6_common_tags
+  children = [
+    control.cis_v100_6_1_1,
+    control.cis_v100_6_1_2,
+    control.cis_v100_6_1_3
+  ]
+}
+
+control "cis_v100_6_1_1" {
+  title         = "6.1.1 Enable TLS 1.2 at minimum for all inbound traffic on IBM Cloud Internet  Services Proxy"
+  documentation = file("./cis_v100/docs/cis_v100_6_2_1.md")
+  sql           = query.internet_service_tls_higher_version_enabled.sql
+
+  tags = merge(local.cis_v100_6_common_tags, {
+    cis_item_id = "6.1.1"
+    cis_level   = "1"
+    cis_type    = "manual"
+    service     = "vpc"
+  })
+}
+
+control "cis_v100_6_1_2" {
+  title         = "6.1.2 Ensure Web application firewall is set to ON in IBM Cloud Internet Services  (CIS)"
+  documentation = file("./cis_v100/docs/cis_v100_6_2_1.md")
+  sql           = query.internet_service_waf_enabled.sql
+
+  tags = merge(local.cis_v100_6_common_tags, {
+    cis_item_id = "6.1.2"
+    cis_level   = "1"
+    cis_type    = "manual"
+    service     = "vpc"
+  })
+}
+
+control "cis_v100_6_1_3" {
+  title         = "6.1.3 Ensure DDoS protection is Active on IBM Cloud Internet Services"
+  documentation = file("./cis_v100/docs/cis_v100_6_2_1.md")
+  sql           = query.internet_service_ddos_protection_active.sql
+
+  tags = merge(local.cis_v100_6_common_tags, {
+    cis_item_id = "6.1.3"
+    cis_level   = "1"
+    cis_type    = "manual"
+    service     = "vpc"
+  })
 }
 
 benchmark "cis_v100_6_2" {
   title         = "6.2 IBM Virtual Private Cloud (VPC)"
   documentation = file("./cis_v100/docs/cis_v100_6.md")
-  tags          = local.cis_v100_6_2_common_tags
+  tags          = local.cis_v100_6_common_tags
   children = [
     control.cis_v100_6_2_1,
     control.cis_v100_6_2_3,
@@ -37,7 +82,7 @@ control "cis_v100_6_2_1" {
   documentation = file("./cis_v100/docs/cis_v100_6_2_1.md")
   sql           = query.vpc_network_acl_restrict_ingress_ssh_all.sql
 
-  tags = merge(local.cis_v100_6_2_common_tags, {
+  tags = merge(local.cis_v100_6_common_tags, {
     cis_item_id = "6.2.1"
     cis_level   = "1"
     cis_type    = "manual"
@@ -51,7 +96,7 @@ control "cis_v100_6_2_3" {
   documentation = file("./cis_v100/docs/cis_v100_6_2_3.md")
   sql           = query.vpc_security_group_restrict_ingress_rdp_all.sql
 
-  tags = merge(local.cis_v100_6_2_common_tags, {
+  tags = merge(local.cis_v100_6_common_tags, {
     cis_item_id = "6.2.3"
     cis_level   = "1"
     cis_type    = "manual"
@@ -65,11 +110,12 @@ control "cis_v100_6_2_4" {
   documentation = file("./cis_v100/docs/cis_v100_6_2_4.md")
   sql           = query.vpc_security_group_restrict_ingress_ssh_all.sql
 
-  tags = merge(local.cis_v100_6_2_common_tags, {
-    cis_item_id = "6.2.4"
-    cis_level   = "1"
-    cis_type    = "manual"
-    service     = "vpc"
+  tags = merge(local.cis_v100_6_common_tags, {
+    cis_item_id  = "6.2.4"
+    cis_level    = "1"
+    cis_type     = "manual"
+    control_type = "automated"
+    service      = "vpc"
   })
 }
 
@@ -79,7 +125,7 @@ control "cis_v100_6_2_5" {
   documentation = file("./cis_v100/docs/cis_v100_6_2_5.md")
   sql           = query.vpc_network_acl_restrict_ingress_rdp_all.sql
 
-  tags = merge(local.cis_v100_6_2_common_tags, {
+  tags = merge(local.cis_v100_6_common_tags, {
     cis_item_id = "6.2.5"
     cis_level   = "1"
     cis_type    = "manual"
