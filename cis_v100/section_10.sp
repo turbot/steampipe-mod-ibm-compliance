@@ -7,7 +7,7 @@ locals {
 benchmark "cis_v100_10" {
   title         = "10 IBM Cloud Certificate Manager"
   documentation = file("./cis_v100/docs/cis_v100_10.md")
-  tags          = local.cis_v100_9_common_tags
+  tags          = local.cis_v100_10_common_tags
   children = [
     control.cis_v100_10_1
   ]
@@ -19,8 +19,8 @@ control "cis_v100_10_1" {
   documentation = file("./cis_v100/docs/cis_v100_10_1.md")
   sql           = query.certificate_with_auto_renew_enabled.sql
 
-  tags = merge(local.cis_v100_9_common_tags, {
-    cis_item_id = "9.1"
+  tags = merge(local.cis_v100_10_common_tags, {
+    cis_item_id = "10.1"
     cis_level   = "1"
     cis_type    = "automated"
     service     = "securityadvisor"

@@ -33,7 +33,7 @@ benchmark "cis_v100_1" {
 control "cis_v100_1_1" {
   title         = "1.1 Monitor account owner for frequent, unexpected, or unauthorized logins"
   description   = "Monitor login activity of the account owner to prevent unauthorized usage of the privileged account."
-  documentation = file("./cis_v100/docs/cis_v100_1_10.md")
+  documentation = file("./cis_v100/docs/cis_v100_1_1.md")
   sql           = query.manual_control.sql
 
   tags = merge(local.cis_v100_1_common_tags, {
