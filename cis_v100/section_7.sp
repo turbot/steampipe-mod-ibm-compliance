@@ -86,7 +86,7 @@ control "cis_v100_7_1_2" {
   title         = "7.1.2 Ensure TLS 1.2 for all inbound traffic at IBM Cloud Kubernetes Service Ingress"
   description   = "Ensure that all insecure (HTTP) client requests to applications and services hosted on IBM Cloud Kubernetes Service are redirected to secure TLS connections (HTTPS), and ensure that only TLS versions 1.2+ are supported."
   documentation = file("./cis_v100/docs/cis_v100_7_1_2.md")
-  sql           = query.no_sdk.sql
+  sql           = query.manual_control.sql
 
   tags = merge(local.cis_v100_7_1_common_tags, {
     cis_item_id = "7.1.2"
@@ -100,7 +100,7 @@ control "cis_v100_7_1_3" {
   title         = "7.1.3 Ensure IBM Cloud Kubernetes Service worker nodes are updated to the latest image to ensure patching of vulnerabilities"
   description   = "Update the worker nodes in a cluster to the latest patch version so that security fixes are applied to those worker nodes."
   documentation = file("./cis_v100/docs/cis_v100_7_1_3.md")
-  sql           = query.no_sdk.sql
+  sql           = query.manual_control.sql
 
   tags = merge(local.cis_v100_7_1_common_tags, {
     cis_item_id = "7.1.3"
@@ -114,7 +114,7 @@ control "cis_v100_7_1_4" {
   title         = "7.1.4 Ensure that clusters are accessible only by using private endpoints "
   description   = "Disable the public service endpoint so that communication to the master from both the worker nodes and cluster users is established over the private network through the private service endpoint."
   documentation = file("./cis_v100/docs/cis_v100_7_1_4.md")
-  sql           = query.no_sdk.sql
+  sql           = query.manual_control.sql
 
   tags = merge(local.cis_v100_7_1_common_tags, {
     cis_item_id = "7.1.4"
@@ -128,7 +128,7 @@ control "cis_v100_7_1_5" {
   title         = "7.1.5 Ensure IBM Cloud Kubernetes Service cluster has image pull secrets enabled"
   description   = "Image pull secrets are credentials that authorize your cluster to pull images from a private image registry. IBM Cloud Kubernetes Service integrates with IBM Cloud Container Registry and provides pull secrets for IBM Cloud Container Registry in the default Kubernetes namespace."
   documentation = file("./cis_v100/docs/cis_v100_7_1_5.md")
-  sql           = query.no_sdk.sql
+  sql           = query.manual_control.sql
 
   tags = merge(local.cis_v100_7_1_common_tags, {
     cis_item_id = "7.1.5"
@@ -142,7 +142,7 @@ control "cis_v100_7_1_6" {
   title         = "7.1.6 Ensure IBM Cloud Kubernetes Service clusters have the monitoring service enabled"
   description   = "With IBM Cloud Monitoring with Sysdig, you can collect cluster and pod metrics, such as the CPU and memory usage of your worker nodes, incoming and outgoing HTTP traffic for your pods, and data about several infrastructure components. In addition, the agent can collect custom application metrics by using either a Prometheus-compatible scraper or a StatsD facade."
   documentation = file("./cis_v100/docs/cis_v100_7_1_6.md")
-  sql           = query.no_sdk.sql
+  sql           = query.manual_control.sql
 
   tags = merge(local.cis_v100_7_1_common_tags, {
     cis_item_id = "7.1.6"
@@ -156,7 +156,7 @@ control "cis_v100_7_1_7" {
   title         = "7.1.7 Ensure IBM Cloud Kubernetes Service clusters have the logging service enabled"
   description   = "Create a logging configuration to forward cluster and app logs to IBM Log Analysis with LogDNA. IBM Log Analysis with LogDNA offers administrators, DevOps teams, and developers advanced features to filter, search, and tail log data, define alerts, and design custom views to monitor application and system logs."
   documentation = file("./cis_v100/docs/cis_v100_7_1_7.md")
-  sql           = query.no_sdk.sql
+  sql           = query.manual_control.sql
 
   tags = merge(local.cis_v100_7_1_common_tags, {
     cis_item_id = "7.1.7"
@@ -178,7 +178,7 @@ benchmark "cis_v100_7_2" {
 control "cis_v100_7_2_1" {
   title         = "7.2.1 Block deployments of vulnerable images to Kubernetes clusters"
   documentation = file("./cis_v100/docs/cis_v100_7_2_1.md")
-  sql           = query.no_sdk.sql
+  sql           = query.manual_control.sql
 
   tags = merge(local.cis_v100_7_2_common_tags, {
     cis_item_id = "7.2.1"
