@@ -34,7 +34,7 @@ benchmark "cis_v100_2" {
 
 benchmark "cis_v100_2_1" {
   title       = "2.1 Cloud Object Storage"
-  description = "Cloud Object Storage stores encrypted and dispersed data across multiple geographic locations. Information stored with IBM® Cloud Object Storage is encrypted and dispersed across multiple geographic locations, and accessed over popular protocols like HTTPS using a modern RESTful API."
+  description = "Cloud Object Storage stores encrypted and dispersed data across multiple geographic locations. Information stored with IBM Cloud Object Storage is encrypted and dispersed across multiple geographic locations, and accessed over popular protocols like HTTPS using a modern RESTful API."
   tags        = local.cis_v100_2_1_common_tags
   children = [
     benchmark.cis_v100_2_1_1,
@@ -99,7 +99,7 @@ control "cis_v100_2_1_1_3" {
 }
 
 control "cis_v100_2_1_2" {
-  title         = "2.1.2 Ensure network access for Cloud Object Storage is restricted to specific IP  range (Manual)"
+  title         = "2.1.2 Ensure network access for Cloud Object Storage is restricted to specific IP  range"
   description   = ""
   documentation = file("./cis_v100/docs/cis_v100_2_1_2.md")
   sql           = query.manual_control.sql

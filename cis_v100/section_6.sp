@@ -13,7 +13,6 @@ locals {
   })
 }
 
-
 benchmark "cis_v100_6" {
   title         = "6 Networking"
   documentation = file("./cis_v100/docs/cis_v100_6.md")
@@ -36,7 +35,7 @@ benchmark "cis_v100_6_1" {
 }
 
 control "cis_v100_6_1_1" {
-  title         = "6.1.1 Enable TLS 1.2 at minimum for all inbound traffic on IBM Cloud Internet  Services Proxy"
+  title         = "6.1.1 Enable TLS 1.2 at minimum for all inbound traffic on IBM Cloud Internet Services Proxy"
   documentation = file("./cis_v100/docs/cis_v100_6_2_1.md")
   sql           = query.internet_service_tls_higher_version_enabled.sql
 
@@ -49,7 +48,7 @@ control "cis_v100_6_1_1" {
 }
 
 control "cis_v100_6_1_2" {
-  title         = "6.1.2 Ensure Web application firewall is set to ON in IBM Cloud Internet Services  (CIS)"
+  title         = "6.1.2 Ensure Web application firewall is set to ON in IBM Cloud Internet Services (CIS)"
   documentation = file("./cis_v100/docs/cis_v100_6_2_1.md")
   sql           = query.internet_service_waf_enabled.sql
 

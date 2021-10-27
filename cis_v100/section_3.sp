@@ -5,7 +5,7 @@ locals {
 }
 
 benchmark "cis_v100_3" {
-  title         = "3  Maintenance, Monitoring and Analysis of Audit Logs"
+  title         = "3 Maintenance, Monitoring and Analysis of Audit Logs"
   documentation = file("./cis_v100/docs/cis_v100_3.md")
   tags          = local.cis_v100_3_common_tags
   children = [
