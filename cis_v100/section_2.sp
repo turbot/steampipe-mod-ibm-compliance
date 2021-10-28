@@ -154,7 +154,7 @@ control "cis_v100_2_1_5" {
 
 benchmark "cis_v100_2_2" {
   title       = "2.2  File Block Storage"
-  description = "IBM Cloud™ Block Storage is persistent, high-performance iSCSI storage that is provisioned and managed independently of compute instances. iSCSI-based Block Storage LUNs are connected to authorized devices through redundant multi-path I/O (MPIO) connections."
+  description = "IBM Cloud Block Storage is persistent, high-performance iSCSI storage that is provisioned and managed independently of compute instances. iSCSI-based Block Storage LUNs are connected to authorized devices through redundant multi-path I/O (MPIO) connections."
   tags        = local.cis_v100_2_2_common_tags
   children = [
     benchmark.cis_v100_2_2_1,

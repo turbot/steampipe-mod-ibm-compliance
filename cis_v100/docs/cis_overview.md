@@ -15,7 +15,7 @@ The following configuration profiles are defined by this Benchmark:
 Items in this profile intend to:
 - be practical and prudent;
 - provide security focused best practice hardening of a technology; and
-- limit impact to the utility of the technology beyond acceptable means.
+- limit impact to the utility of the technology beyond acceptable means
 
 ### Level 2
 
@@ -26,4 +26,4 @@ the following characteristics:
   than manageability and usability
 - acts as defense in depth measure
 - may impact the utility or performance of the technology
-- may include additional licensing, cost, or addition of third party software.
+- may include additional licensing, cost, or addition of third party software
