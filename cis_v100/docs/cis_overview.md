@@ -5,9 +5,6 @@ To obtain the latest version of the official guide, please visit http://benchmar
 This security configuration Benchmark covers foundational elements of IBM Cloud. The
 recommendations detailed here are important security considerations when designing
 your infrastructure on IBM Cloud Services.
-To obtain the latest version of this guide, please visit http://benchmarks.cisecurity.org. If
-you have questions, comments, or have identified ways to improve this guide, please write
-us at BenchmarkInfo@cisecurity.org.
 
 ## Intended Audience
 
