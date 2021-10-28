@@ -6,6 +6,8 @@ repository: "https://github.com/turbot/steampipe-mod-ibm-compliance"
 
 Run individual configuration, compliance and security controls or full `CIS` compliance benchmarks across all your IBM accounts.
 
+![image](https://raw.githubusercontent.com/turbot/steampipe-mod-ibm-compliance/main/docs/ibm_compliance_terminal.png)
+
 ## References
 
 [IBM Cloud](https://www.ibm.com/cloud) is a set of cloud computing services for business including IaaS and PaaS.
