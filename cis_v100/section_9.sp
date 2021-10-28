@@ -16,7 +16,7 @@ benchmark "cis_v100_9" {
 control "cis_v100_9_1" {
   title         = "9.1 Ensure alerts are enabled for vulnerabilities discovered in container images in Container Registry"
   description   = "Monitor login activity of the account owner to prevent unauthorized usage of the privileged account."
-  # documentation = file("./cis_v100/docs/cis_v100_9_1.md")
+  documentation = file("./cis_v100/docs/cis_v100_9_1.md")
   sql           = query.manual_control.sql
 
   tags = merge(local.cis_v100_9_common_tags, {

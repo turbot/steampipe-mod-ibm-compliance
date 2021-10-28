@@ -1,5 +1,14 @@
 # IBM Cloud Compliance Scanning Tool
 
+60+ checks covering industry defined security best practices across all IBM Cloud regions.
+
+**Includes support for v1.0.0 CIS benchmarks:**
+
+![image](https://raw.githubusercontent.com/turbot/steampipe-mod-ibm-compliance/main/docs/ibm_compliance_terminal.png)
+
+Includes support for:
+* [IBM Cloud CIS v1.0.0](https://hub.steampipe.io/mods/turbot/ibm_compliance/controls/benchmark.cis_v100)
+
 ## Quick start
 
 1) Download and install Steampipe (https://steampipe.io/downloads). Or use Brew:
@@ -9,7 +18,7 @@ brew tap turbot/tap
 brew install steampipe
 
 steampipe -v
-steampipe version 0.8.2
+steampipe version 0.9.0
 ```
 
 2) Install the IBM Cloud plugin
