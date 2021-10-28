@@ -8,7 +8,7 @@ select
   end as status,
   case
     when imported then name || ' is imported certificate without auto-renewal enabled.'
-    when auto_renew_enabled then  name || ' enabled with auto-renewal.'
+    when auto_renew_enabled then name || ' enabled with auto-renewal.'
     else name || ' not enabled with auto-renewal.'
   end as reason,
   -- Additional Dimensions

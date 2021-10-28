@@ -1,12 +1,12 @@
 with associated_policy_users as(
-select
-  user_id,
-  u.iam_id,
-  u.account_id as account_id,
-  roles
+  select
+    user_id,
+    u.iam_id,
+    u.account_id as account_id,
+    roles
   from
-    ibm_iam_user u
-    left join ibm_iam_user_policy p on u.iam_id = p.iam_id
+    ibm_iam_user as u
+    left join ibm_iam_user_policy as p on u.iam_id = p.iam_id
 )
 select
   -- Required Columns

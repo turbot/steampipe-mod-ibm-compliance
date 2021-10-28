@@ -5,7 +5,7 @@ select
     when web_application_firewall != 'off' then 'ok'
     else 'alarm'
   end as status,
-  cis.name || ' Web Application Firewall setting is ' || web_application_firewall as reason,
+  cis.name || ' Web Application Firewall setting is ' || web_application_firewall || '.' as reason,
   -- Additional Dimensions
   acc.guid as account_id
   from

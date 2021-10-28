@@ -26,7 +26,7 @@ select
   end as status,
   case
     when r.crn is null then sg.title || ' ingress restricted for RDP from 0.0.0.0/0.'
-    else  sg.title || ' contains ' || r.num_rdp_rules || ' ingress rule(s) allowing RDP from 0.0.0.0/0.'
+    else sg.title || ' contains ' || r.num_rdp_rules || ' ingress rule(s) allowing RDP from 0.0.0.0/0.'
   end as reason,
   -- Additional Dimensions
   sg.region,

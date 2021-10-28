@@ -27,7 +27,7 @@ select
   end as status,
   case
     when r.crn is null then acl.title || ' ingress restricted for SSH from 0.0.0.0/0.'
-    else  acl.title || ' contains ' || r.num_ssh_rules || ' ingress rule(s) allowing SSH from 0.0.0.0/0.'
+    else acl.title || ' contains ' || r.num_ssh_rules || ' ingress rule(s) allowing SSH from 0.0.0.0/0.'
   end as reason,
   -- Additional Dimensions
   acl.region,
