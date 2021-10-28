@@ -1,8 +1,6 @@
 # IBM Cloud Compliance Scanning Tool
 
-60+ checks covering industry defined security best practices across all IBM Cloud regions.
-
-**Includes support for v1.0.0 CIS benchmarks:**
+60+ checks covering industry defined security best practices across all IBM Cloud regions. Includes support for v1.0.0 CIS benchmarks.
 
 ![image](https://raw.githubusercontent.com/turbot/steampipe-mod-ibm-compliance/main/docs/ibm_compliance_terminal.png)
 
