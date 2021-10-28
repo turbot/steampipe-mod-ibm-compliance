@@ -72,4 +72,4 @@ Please see the [contribution guidelines](https://github.com/turbot/steampipe/blo
 `help wanted` issues:
 
 - [Steampipe](https://github.com/turbot/steampipe/labels/help%20wanted)
-- [Alibaba Cloud Compliance Mod](https://github.com/turbot/steampipe-mod-ibm-compliance/labels/help%20wanted)
+- [IBM Cloud Compliance Mod](https://github.com/turbot/steampipe-mod-ibm-compliance/labels/help%20wanted)
