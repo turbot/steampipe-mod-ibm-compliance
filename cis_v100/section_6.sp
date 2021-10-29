@@ -79,6 +79,7 @@ benchmark "cis_v100_6_2" {
   tags          = local.cis_v100_6_2_common_tags
   children = [
     control.cis_v100_6_2_1,
+    control.cis_v100_6_2_2,
     control.cis_v100_6_2_3,
     control.cis_v100_6_2_4,
     control.cis_v100_6_2_5
@@ -93,6 +94,20 @@ control "cis_v100_6_2_1" {
 
   tags = merge(local.cis_v100_6_2_common_tags, {
     cis_item_id = "6.2.1"
+    cis_level   = "1"
+    cis_type    = "manual"
+    service     = "vpc"
+  })
+}
+
+control "cis_v100_6_2_2" {
+  title         = "6.2.2 Ensure the default security group of every VPC restricts all traffic"
+  description   = "VPC security groups provide stateful filtering of ingress/egress network traffic to Virtual Server. It is recommended that no security group allows unrestricted ingress access to a Virtual Server. Unless modified, the default security group allows inbound traffic from all members of the group that is, all other virtual servers that are attached to this security group."
+  documentation = file("./cis_v100/docs/cis_v100_6_2_2.md")
+  sql           = query.manual_control.sql
+
+  tags = merge(local.cis_v100_6_2_common_tags, {
+    cis_item_id = "6.2.2"
     cis_level   = "1"
     cis_type    = "manual"
     service     = "vpc"
@@ -123,7 +138,6 @@ control "cis_v100_6_2_4" {
     cis_item_id  = "6.2.4"
     cis_level    = "1"
     cis_type     = "manual"
-    control_type = "automated"
     service      = "vpc"
   })
 }
