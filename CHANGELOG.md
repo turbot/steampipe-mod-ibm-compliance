@@ -4,6 +4,10 @@ _What's new?_
 
 - Added: CIS v1.0.0 benchmark now includes `cis_v100_1_6` and `cis_v100_6_2_2` controls
 
+_Bug fixes_
+
+- Fixed the CIS controls which had the incorrect `cis_type` tag
+
 ## v0.1 [2021-10-28]
 
 _What's new?_
