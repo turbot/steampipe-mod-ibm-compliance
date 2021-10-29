@@ -68,7 +68,7 @@ control "cis_v100_1_3" {
   tags = merge(local.cis_v100_1_common_tags, {
     cis_item_id = "1.3"
     cis_level   = "1"
-    cis_type    = "automated"
+    cis_type    = "manual"
     service     = "iam"
   })
 }
@@ -82,7 +82,7 @@ control "cis_v100_1_4" {
   tags = merge(local.cis_v100_1_common_tags, {
     cis_item_id = "1.4"
     cis_level   = "1"
-    cis_type    = "automated"
+    cis_type    = "manual"
     service     = "iam"
   })
 }
@@ -96,7 +96,7 @@ control "cis_v100_1_5" {
   tags = merge(local.cis_v100_1_common_tags, {
     cis_item_id = "1.5"
     cis_level   = "1"
-    cis_type    = "automated"
+    cis_type    = "manual"
     service     = "iam"
   })
 }
@@ -124,7 +124,7 @@ control "cis_v100_1_7" {
   tags = merge(local.cis_v100_1_common_tags, {
     cis_item_id = "1.7"
     cis_level   = "1"
-    cis_type    = "automated"
+    cis_type    = "manual"
     service     = "iam"
   })
 }
@@ -138,7 +138,7 @@ control "cis_v100_1_8" {
   tags = merge(local.cis_v100_1_common_tags, {
     cis_item_id = "1.8"
     cis_level   = "1"
-    cis_type    = "automated"
+    cis_type    = "manual"
     service     = "iam"
   })
 }
@@ -152,7 +152,7 @@ control "cis_v100_1_9" {
   tags = merge(local.cis_v100_1_common_tags, {
     cis_item_id = "1.9"
     cis_level   = "1"
-    cis_type    = "automated"
+    cis_type    = "manual"
     service     = "iam"
   })
 }
@@ -166,7 +166,7 @@ control "cis_v100_1_10" {
   tags = merge(local.cis_v100_1_common_tags, {
     cis_item_id = "1.10"
     cis_level   = "1"
-    cis_type    = "automated"
+    cis_type    = "manual"
     service     = "iam"
   })
 }
@@ -180,7 +180,7 @@ control "cis_v100_1_11" {
   tags = merge(local.cis_v100_1_common_tags, {
     cis_item_id = "1.11"
     cis_level   = "1"
-    cis_type    = "automated"
+    cis_type    = "manual"
     service     = "iam"
   })
 }
@@ -194,7 +194,7 @@ control "cis_v100_1_12" {
   tags = merge(local.cis_v100_1_common_tags, {
     cis_item_id = "1.12"
     cis_level   = "1"
-    cis_type    = "automated"
+    cis_type    = "manual"
     service     = "iam"
   })
 }
@@ -208,7 +208,7 @@ control "cis_v100_1_13" {
   tags = merge(local.cis_v100_1_common_tags, {
     cis_item_id = "1.13"
     cis_level   = "1"
-    cis_type    = "automated"
+    cis_type    = "manual"
     service     = "iam"
   })
 }
@@ -250,7 +250,7 @@ control "cis_v100_1_16" {
   tags = merge(local.cis_v100_1_common_tags, {
     cis_item_id = "1.16"
     cis_level   = "1"
-    cis_type    = "automated"
+    cis_type    = "manual"
     service     = "iam"
   })
 }

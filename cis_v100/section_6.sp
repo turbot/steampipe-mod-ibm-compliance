@@ -138,7 +138,6 @@ control "cis_v100_6_2_4" {
     cis_item_id  = "6.2.4"
     cis_level    = "1"
     cis_type     = "manual"
-    control_type = "automated"
     service      = "vpc"
   })
 }
