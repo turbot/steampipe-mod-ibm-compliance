@@ -23,7 +23,7 @@ control "cis_v100_5_1" {
   tags = merge(local.cis_v100_5_common_tags, {
     cis_item_id = "5.1"
     cis_level   = "1"
-    cis_type    = "manual"
+    cis_type    = "automated"
     service     = "cloudant"
   })
 }
@@ -49,7 +49,7 @@ control "cis_v100_5_3" {
   tags = merge(local.cis_v100_5_common_tags, {
     cis_item_id = "5.3"
     cis_level   = "1"
-    cis_type    = "manual"
+    cis_type    = "automated"
     service     = "cloudant"
   })
 }
