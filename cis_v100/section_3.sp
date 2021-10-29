@@ -34,7 +34,7 @@ control "cis_v100_3_1" {
 }
 
 control "cis_v100_3_2" {
-  title         = "3.1 Ensure that archiving is enabled for audit events"
+  title         = "3.2 Ensure that archiving is enabled for audit events"
   description   = "Archive events for long-term storage so that you have access to data for a longer period of time, you can comply with highly regulated environments, you can recover quickly in the eventuality of a disaster scenario, and you can adhere to internal data storage policies"
   documentation = file("./cis_v100/docs/cis_v100_3_2.md")
   sql           = query.manual_control.sql

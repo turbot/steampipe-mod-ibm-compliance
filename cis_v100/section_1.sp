@@ -14,6 +14,7 @@ benchmark "cis_v100_1" {
     control.cis_v100_1_3,
     control.cis_v100_1_4,
     control.cis_v100_1_5,
+    control.cis_v100_1_6,
     control.cis_v100_1_7,
     control.cis_v100_1_8,
     control.cis_v100_1_9,
@@ -96,6 +97,20 @@ control "cis_v100_1_5" {
     cis_item_id = "1.5"
     cis_level   = "1"
     cis_type    = "automated"
+    service     = "iam"
+  })
+}
+
+control "cis_v100_1_6" {
+  title         = "1.6 Ensure compliance with IBM Cloud password requirements"
+  description   = "A strong password is a very important step towards account security and safety. Passwords should never be shared with anyone, and must follow the strong password requirements."
+  documentation = file("./cis_v100/docs/cis_v100_1_6.md")
+  sql           = query.manual_control.sql
+
+  tags = merge(local.cis_v100_1_common_tags, {
+    cis_item_id = "1.6"
+    cis_level   = "1"
+    cis_type    = "manual"
     service     = "iam"
   })
 }
