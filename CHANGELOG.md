@@ -2,7 +2,7 @@
 
 _Bug fixes_
 
-- Fixed the brand colour of the compliance icon to maintain consistency with the IBM plugin icon
+- Fixed brand colour to match IBM's
 
 ## v0.2 [2021-10-29]
 
