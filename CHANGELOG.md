@@ -1,3 +1,9 @@
+## v0.3 [2021-11-12]
+
+_Bug fixes_
+
+- Fixed brand colour to match IBM's
+
 ## v0.2 [2021-10-29]
 
 _What's new?_
