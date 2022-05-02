@@ -7,13 +7,17 @@ locals {
 benchmark "cis_v100_4" {
   title         = "4 IBM Cloud Databases Family"
   documentation = file("./cis_v100/docs/cis_v100_4.md")
-  tags          = local.cis_v100_4_common_tags
   children = [
     control.cis_v100_4_1,
     control.cis_v100_4_2,
     control.cis_v100_4_3,
     control.cis_v100_4_4
   ]
+
+  tags = merge(local.cis_v100_4_common_tags, {
+    service = "IBM/Database"
+    type    = "Benchmark"
+  })
 }
 
 control "cis_v100_4_1" {
@@ -25,7 +29,7 @@ control "cis_v100_4_1" {
     cis_item_id = "4.1"
     cis_level   = "1"
     cis_type    = "manual"
-    service     = "database"
+    service = "IBM/Database"
   })
 }
 
@@ -38,7 +42,7 @@ control "cis_v100_4_2" {
     cis_item_id = "4.2"
     cis_level   = "2"
     cis_type    = "manual"
-    service     = "database"
+    service = "IBM/Database"
   })
 }
 
@@ -51,7 +55,7 @@ control "cis_v100_4_3" {
     cis_item_id = "4.3"
     cis_level   = "2"
     cis_type    = "manual"
-    service     = "monitoring"
+    service = "IBM/Database"
   })
 }
 
@@ -64,6 +68,6 @@ control "cis_v100_4_4" {
     cis_item_id = "4.4"
     cis_level   = "2"
     cis_type    = "manual"
-    service     = "monitoring"
+    service = "IBM/Database"
   })
 }

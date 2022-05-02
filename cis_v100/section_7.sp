@@ -22,17 +22,19 @@ locals {
 benchmark "cis_v100_7" {
   title         = "7 Containers"
   documentation = file("./cis_v100/docs/cis_v100_7.md")
-  tags          = local.cis_v100_7_common_tags
   children = [
     benchmark.cis_v100_7_1,
     benchmark.cis_v100_7_2,
   ]
+
+  tags = merge(local.cis_v100_7_common_tags, {
+    type    = "Benchmark"
+  })
 }
 
 benchmark "cis_v100_7_1" {
   title       = "7.1 IBM Kubernetes Service"
   documentation = file("./cis_v100/docs/cis_v100_7_1.md")
-  tags        = local.cis_v100_7_1_common_tags
   children = [
     benchmark.cis_v100_7_1_1,
     control.cis_v100_7_1_2,
@@ -42,16 +44,24 @@ benchmark "cis_v100_7_1" {
     control.cis_v100_7_1_6,
     control.cis_v100_7_1_7
   ]
+
+  tags = merge(local.cis_v100_7_1_common_tags, {
+    type    = "Benchmark"
+  })
 }
 
 benchmark "cis_v100_7_1_1" {
   title       = "7.1.1 Use a Key Management Service (KMS) provider to encrypt data in Kubernetes secrets"
   documentation = file("./cis_v100/docs/cis_v100_7_1_1.md")
-  tags        = local.cis_v100_7_1_1_common_tags
   children = [
     control.cis_v100_7_1_1_1,
     control.cis_v100_7_1_1_2
   ]
+
+  tags = merge(local.cis_v100_7_1_1_common_tags, {
+    service = "IBM/KMS"
+    type    = "Benchmark"
+  })
 }
 
 control "cis_v100_7_1_1_1" {
@@ -64,7 +74,7 @@ control "cis_v100_7_1_1_1" {
     cis_item_id = "7.1.1.1"
     cis_level   = "1"
     cis_type    = "manual"
-    service     = "containers"
+    service     = "IBM/KMS"
   })
 }
 
@@ -78,7 +88,7 @@ control "cis_v100_7_1_1_2" {
     cis_item_id = "7.1.1.2"
     cis_level   = "1"
     cis_type    = "manual"
-    service     = "containers"
+    service     = "IBM/KMS"
   })
 }
 
@@ -92,7 +102,7 @@ control "cis_v100_7_1_2" {
     cis_item_id = "7.1.2"
     cis_level   = "1"
     cis_type    = "automated"
-    service     = "containers"
+    service     = "IBM/Containers"
   })
 }
 
@@ -106,7 +116,7 @@ control "cis_v100_7_1_3" {
     cis_item_id = "7.1.3"
     cis_level   = "1"
     cis_type    = "automated"
-    service     = "containers"
+    service     = "IBM/Containers"
   })
 }
 
@@ -120,7 +130,7 @@ control "cis_v100_7_1_4" {
     cis_item_id = "7.1.4"
     cis_level   = "1"
     cis_type    = "automated"
-    service     = "containers"
+    service     = "IBM/Containers"
   })
 }
 
@@ -134,7 +144,7 @@ control "cis_v100_7_1_5" {
     cis_item_id = "7.1.5"
     cis_level   = "1"
     cis_type    = "automated"
-    service     = "containers"
+    service     = "IBM/Containers"
   })
 }
 
@@ -148,7 +158,7 @@ control "cis_v100_7_1_6" {
     cis_item_id = "7.1.6"
     cis_level   = "1"
     cis_type    = "automated"
-    service     = "containers"
+    service     = "IBM/Containers"
   })
 }
 
@@ -162,17 +172,21 @@ control "cis_v100_7_1_7" {
     cis_item_id = "7.1.7"
     cis_level   = "1"
     cis_type    = "automated"
-    service     = "containers"
+    service     = "IBM/Containers"
   })
 }
 
 benchmark "cis_v100_7_2" {
   title       = "7.2 Container Registry"
   description = "IBM Cloud Container Registry provides a multi-tenant, highly available, scalable, and encrypted private image registry that is hosted and managed by IBM®. You can use IBM Cloud Container Registry by setting up your own image namespace and pushing container images to your namespace."
-  tags        = local.cis_v100_7_2_common_tags
   children = [
     control.cis_v100_7_2_1
   ]
+
+  tags = merge(local.cis_v100_7_2_common_tags, {
+    service = "IBM/Containers"
+    type    = "Benchmark"
+  })
 }
 
 control "cis_v100_7_2_1" {
@@ -184,6 +198,6 @@ control "cis_v100_7_2_1" {
     cis_item_id = "7.2.1"
     cis_level   = "1"
     cis_type    = "automated"
-    service     = "containers"
+    service     = "IBM/Containers"
   })
 }
