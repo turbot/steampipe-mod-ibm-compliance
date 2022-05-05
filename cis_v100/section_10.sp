@@ -7,10 +7,14 @@ locals {
 benchmark "cis_v100_10" {
   title         = "10 IBM Cloud Certificate Manager"
   documentation = file("./cis_v100/docs/cis_v100_10.md")
-  tags          = local.cis_v100_10_common_tags
   children = [
     control.cis_v100_10_1
   ]
+
+  tags = merge(local.cis_v100_10_common_tags, {
+    service = "IBM/CertificateManager"
+    type    = "Benchmark"
+  })
 }
 
 control "cis_v100_10_1" {
@@ -23,6 +27,6 @@ control "cis_v100_10_1" {
     cis_item_id = "10.1"
     cis_level   = "1"
     cis_type    = "automated"
-    service     = "securityadvisor"
+    service     = "IBM/CertificateManager"
   })
 }

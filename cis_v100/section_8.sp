@@ -13,20 +13,28 @@ locals {
 benchmark "cis_v100_8" {
   title         = "8 Key Management"
   documentation = file("./cis_v100/docs/cis_v100_8.md")
-  tags          = local.cis_v100_8_common_tags
   children = [
     benchmark.cis_v100_8_1
   ]
+
+  tags = merge(local.cis_v100_8_common_tags, {
+    service = "IBM/KMS"
+    type    = "Benchmark"
+  })
 }
 
 benchmark "cis_v100_8_1" {
   title         = "8.1 IBM Key Protect for IBM Cloud"
   documentation = file("./cis_v100/docs/cis_v100_8_1.md")
-  tags          = local.cis_v100_8_1_common_tags
   children = [
     control.cis_v100_8_1_1,
     control.cis_v100_8_1_2,
   ]
+
+  tags = merge(local.cis_v100_8_1_common_tags, {
+    service = "IBM/KMS"
+    type    = "Benchmark"
+  })
 }
 
 control "cis_v100_8_1_1" {
@@ -38,7 +46,7 @@ control "cis_v100_8_1_1" {
     cis_item_id = "8.1.1"
     cis_level   = "2"
     cis_type    = "automated"
-    service     = "keymanagement"
+    service     = "IBM/KMS"
   })
 }
 
@@ -51,6 +59,6 @@ control "cis_v100_8_1_2" {
     cis_item_id = "8.1.2"
     cis_level   = "2"
     cis_type    = "manual"
-    service     = "keymanagement"
+    service     = "IBM/KMS"
   })
 }

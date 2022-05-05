@@ -7,12 +7,16 @@ locals {
 benchmark "cis_v100_5" {
   title         = "5 Cloudant"
   documentation = file("./cis_v100/docs/cis_v100_4.md")
-  tags          = local.cis_v100_5_common_tags
   children = [
     control.cis_v100_5_1,
     control.cis_v100_5_2,
     control.cis_v100_5_3,
   ]
+
+  tags = merge(local.cis_v100_5_common_tags, {
+    service = "IBM/Cloudant"
+    type    = "Benchmark"
+  })
 }
 
 control "cis_v100_5_1" {
@@ -24,7 +28,7 @@ control "cis_v100_5_1" {
     cis_item_id = "5.1"
     cis_level   = "1"
     cis_type    = "automated"
-    service     = "cloudant"
+    service     = "IBM/Cloudant"
   })
 }
 
@@ -37,7 +41,7 @@ control "cis_v100_5_2" {
     cis_item_id = "5.2"
     cis_level   = "1"
     cis_type    = "manual"
-    service     = "cloudant"
+    service     = "IBM/Cloudant"
   })
 }
 
@@ -50,6 +54,6 @@ control "cis_v100_5_3" {
     cis_item_id = "5.3"
     cis_level   = "1"
     cis_type    = "automated"
-    service     = "cloudant"
+    service     = "IBM/Cloudant"
   })
 }

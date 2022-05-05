@@ -25,17 +25,19 @@ locals {
 benchmark "cis_v100_2" {
   title         = "2 Storage"
   documentation = file("./cis_v100/docs/cis_v100_2.md")
-  tags          = local.cis_v100_2_common_tags
   children = [
     benchmark.cis_v100_2_1,
     benchmark.cis_v100_2_2,
   ]
+
+  tags = merge(local.cis_v100_2_common_tags, {
+    type = "Benchmark"
+  })
 }
 
 benchmark "cis_v100_2_1" {
   title       = "2.1 Cloud Object Storage"
   description = "Cloud Object Storage stores encrypted and dispersed data across multiple geographic locations. Information stored with IBM Cloud Object Storage is encrypted and dispersed across multiple geographic locations, and accessed over popular protocols like HTTPS using a modern RESTful API."
-  tags        = local.cis_v100_2_1_common_tags
   children = [
     benchmark.cis_v100_2_1_1,
     control.cis_v100_2_1_2,
@@ -43,17 +45,26 @@ benchmark "cis_v100_2_1" {
     control.cis_v100_2_1_4,
     control.cis_v100_2_1_5,
   ]
+
+  tags = merge(local.cis_v100_2_1_common_tags, {
+    service = "IBM/Storage"
+    type    = "Benchmark"
+  })
 }
 
 benchmark "cis_v100_2_1_1" {
   title       = "2.1.1 Cloud Object Storage Encryption"
   description = "Objects stored in IBM Cloud Object Storage need to be encrypted at all times for client data security. By default all objects stored in IBM Cloud Object Storage are encrypted at-rest using provider-managed keys and no user action is needed. Optionally, you can also leverage IBM Cloud Object Storage integration with IBM Cloud Key Management Services to further add another layer of encryption to the Data Encryption Keys (DEKs) associated with the data (objects) stored in Cloud Object Storage buckets."
-  tags        = local.cis_v100_2_1_1_common_tags
   children = [
     control.cis_v100_2_1_1_1,
     control.cis_v100_2_1_1_2,
     control.cis_v100_2_1_1_3,
   ]
+
+  tags = merge(local.cis_v100_2_2_1_common_tags, {
+    service = "IBM/Storage"
+    type    = "Benchmark"
+  })
 }
 
 control "cis_v100_2_1_1_1" {
@@ -66,7 +77,7 @@ control "cis_v100_2_1_1_1" {
     cis_item_id = "2.1.1.1"
     cis_level   = "1"
     cis_type    = "manual"
-    service     = "storage"
+    service     = "IBM/Storage"
   })
 }
 
@@ -80,7 +91,7 @@ control "cis_v100_2_1_1_2" {
     cis_item_id = "2.1.1.2"
     cis_level   = "1"
     cis_type    = "manual"
-    service     = "storage"
+    service     = "IBM/Storage"
   })
 }
 
@@ -94,7 +105,7 @@ control "cis_v100_2_1_1_3" {
     cis_item_id = "2.1.1.3"
     cis_level   = "1"
     cis_type    = "manual"
-    service     = "storage"
+    service     = "IBM/Storage"
   })
 }
 
@@ -108,7 +119,7 @@ control "cis_v100_2_1_2" {
     cis_item_id = "2.1.2"
     cis_level   = "1"
     cis_type    = "manual"
-    service     = "storage"
+    service     = "IBM/Storage"
   })
 }
 
@@ -122,7 +133,7 @@ control "cis_v100_2_1_3" {
     cis_item_id = "2.1.3"
     cis_level   = "1"
     cis_type    = "manual"
-    service     = "storage"
+    service     = "IBM/Storage"
   })
 }
 
@@ -135,7 +146,7 @@ control "cis_v100_2_1_4" {
     cis_item_id = "2.1.4"
     cis_level   = "1"
     cis_type    = "manual"
-    service     = "storage"
+    service     = "IBM/Storage"
   })
 }
 
@@ -148,31 +159,39 @@ control "cis_v100_2_1_5" {
     cis_item_id = "2.1.5"
     cis_level   = "1"
     cis_type    = "manual"
-    service     = "storage"
+    service     = "IBM/Storage"
   })
 }
 
 benchmark "cis_v100_2_2" {
   title       = "2.2  File Block Storage"
   description = "IBM Cloud Block Storage is persistent, high-performance iSCSI storage that is provisioned and managed independently of compute instances. iSCSI-based Block Storage LUNs are connected to authorized devices through redundant multi-path I/O (MPIO) connections."
-  tags        = local.cis_v100_2_2_common_tags
   children = [
     benchmark.cis_v100_2_2_1,
     control.cis_v100_2_2_2,
     control.cis_v100_2_2_3,
     control.cis_v100_2_2_4,
   ]
+
+  tags = merge(local.cis_v100_2_2_common_tags, {
+    service = "IBM/BlockStorage"
+    type    = "Benchmark"
+  })
 }
 
 benchmark "cis_v100_2_2_1" {
   title       = "2.2.1  Cloud Block Storage Encryption"
   description = "Objects stored in IBM Cloud Block Storage need to be encrypted at all times for client data security. By default all objects stored in IBM Cloud Block Storage are encrypted at-rest by ensuring user selects an encryption key from various available options."
-  tags        = local.cis_v100_2_2_1_common_tags
   children = [
     control.cis_v100_2_2_1_1,
     control.cis_v100_2_2_1_2,
     control.cis_v100_2_2_1_3,
   ]
+
+  tags = merge(local.cis_v100_2_2_1_common_tags, {
+    service = "IBM/BlockStorage"
+    type    = "Benchmark"
+  })
 }
 
 control "cis_v100_2_2_1_1" {
@@ -185,7 +204,7 @@ control "cis_v100_2_2_1_1" {
     cis_item_id = "2.2.1.1"
     cis_level   = "2"
     cis_type    = "manual"
-    service     = "storage"
+    service     = "IBM/BlockStorage"
   })
 }
 
@@ -199,7 +218,7 @@ control "cis_v100_2_2_1_2" {
     cis_item_id = "2.2.1.2"
     cis_level   = "2"
     cis_type    = "manual"
-    service     = "storage"
+    service     = "IBM/BlockStorage"
   })
 }
 
@@ -213,7 +232,7 @@ control "cis_v100_2_2_1_3" {
     cis_item_id = "2.2.1.3"
     cis_level   = "2"
     cis_type    = "manual"
-    service     = "storage"
+    service     = "IBM/BlockStorage"
   })
 }
 
@@ -227,7 +246,7 @@ control "cis_v100_2_2_2" {
     cis_item_id = "2.2.2"
     cis_level   = "2"
     cis_type    = "manual"
-    service     = "storage"
+    service     = "IBM/BlockStorage"
   })
 }
 
@@ -241,7 +260,7 @@ control "cis_v100_2_2_3" {
     cis_item_id = "2.2.3"
     cis_level   = "2"
     cis_type    = "manual"
-    service     = "storage"
+    service     = "IBM/BlockStorage"
   })
 }
 
@@ -255,7 +274,6 @@ control "cis_v100_2_2_4" {
     cis_item_id = "2.2.4"
     cis_level   = "1"
     cis_type    = "manual"
-    service     = "storage"
+    service     = "IBM/BlockStorage"
   })
 }
-
