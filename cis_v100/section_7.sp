@@ -33,7 +33,7 @@ benchmark "cis_v100_7" {
 }
 
 benchmark "cis_v100_7_1" {
-  title       = "7.1 IBM Kubernetes Service"
+  title         = "7.1 IBM Kubernetes Service"
   documentation = file("./cis_v100/docs/cis_v100_7_1.md")
   children = [
     benchmark.cis_v100_7_1_1,
@@ -51,7 +51,7 @@ benchmark "cis_v100_7_1" {
 }
 
 benchmark "cis_v100_7_1_1" {
-  title       = "7.1.1 Use a Key Management Service (KMS) provider to encrypt data in Kubernetes secrets"
+  title         = "7.1.1 Use a Key Management Service (KMS) provider to encrypt data in Kubernetes secrets"
   documentation = file("./cis_v100/docs/cis_v100_7_1_1.md")
   children = [
     control.cis_v100_7_1_1_1,

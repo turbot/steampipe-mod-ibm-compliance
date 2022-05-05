@@ -146,10 +146,10 @@ control "cis_v100_6_2_4" {
   sql           = query.vpc_security_group_restrict_ingress_ssh_all.sql
 
   tags = merge(local.cis_v100_6_2_common_tags, {
-    cis_item_id  = "6.2.4"
-    cis_level    = "1"
-    cis_type     = "manual"
-    service      = "IBM/VPC"
+    cis_item_id = "6.2.4"
+    cis_level   = "1"
+    cis_type    = "manual"
+    service     = "IBM/VPC"
   })
 }
 

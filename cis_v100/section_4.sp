@@ -29,7 +29,7 @@ control "cis_v100_4_1" {
     cis_item_id = "4.1"
     cis_level   = "1"
     cis_type    = "manual"
-    service = "IBM/Database"
+    service     = "IBM/Database"
   })
 }
 
@@ -42,7 +42,7 @@ control "cis_v100_4_2" {
     cis_item_id = "4.2"
     cis_level   = "2"
     cis_type    = "manual"
-    service = "IBM/Database"
+    service     = "IBM/Database"
   })
 }
 
@@ -55,7 +55,7 @@ control "cis_v100_4_3" {
     cis_item_id = "4.3"
     cis_level   = "2"
     cis_type    = "manual"
-    service = "IBM/Database"
+    service     = "IBM/Database"
   })
 }
 
@@ -68,6 +68,6 @@ control "cis_v100_4_4" {
     cis_item_id = "4.4"
     cis_level   = "2"
     cis_type    = "manual"
-    service = "IBM/Database"
+    service     = "IBM/Database"
   })
 }
