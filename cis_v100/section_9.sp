@@ -7,10 +7,14 @@ locals {
 benchmark "cis_v100_9" {
   title         = "9 Security and Compliance"
   documentation = file("./cis_v100/docs/cis_v100_9.md")
-  tags          = local.cis_v100_9_common_tags
   children = [
     control.cis_v100_9_1
   ]
+
+  tags = merge(local.cis_v100_9_common_tags, {
+    service = "IBM/SCC"
+    type    = "Benchmark"
+  })
 }
 
 control "cis_v100_9_1" {
@@ -23,6 +27,6 @@ control "cis_v100_9_1" {
     cis_item_id = "9.1"
     cis_level   = "1"
     cis_type    = "automated"
-    service     = "securityadvisor"
+    service     = "IBM/SCC"
   })
 }

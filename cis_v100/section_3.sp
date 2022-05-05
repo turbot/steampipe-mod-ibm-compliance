@@ -7,7 +7,6 @@ locals {
 benchmark "cis_v100_3" {
   title         = "3 Maintenance, Monitoring and Analysis of Audit Logs"
   documentation = file("./cis_v100/docs/cis_v100_3.md")
-  tags          = local.cis_v100_3_common_tags
   children = [
     control.cis_v100_3_1,
     control.cis_v100_3_2,
@@ -17,6 +16,11 @@ benchmark "cis_v100_3" {
     control.cis_v100_3_6,
     control.cis_v100_3_7,
   ]
+
+  tags = merge(local.cis_v100_3_common_tags, {
+    service = "IBM/Monitoring"
+    type    = "Benchmark"
+  })
 }
 
 control "cis_v100_3_1" {
@@ -29,7 +33,7 @@ control "cis_v100_3_1" {
     cis_item_id = "3.1"
     cis_level   = "1"
     cis_type    = "manual"
-    service     = "monitoring"
+    service     = "IBM/Monitoring"
   })
 }
 
@@ -43,7 +47,7 @@ control "cis_v100_3_2" {
     cis_item_id = "3.2"
     cis_level   = "2"
     cis_type    = "manual"
-    service     = "monitoring"
+    service     = "IBM/Monitoring"
   })
 }
 
@@ -57,7 +61,7 @@ control "cis_v100_3_3" {
     cis_item_id = "3.3"
     cis_level   = "2"
     cis_type    = "manual"
-    service     = "monitoring"
+    service     = "IBM/Monitoring"
   })
 }
 
@@ -71,7 +75,7 @@ control "cis_v100_3_4" {
     cis_item_id = "3.4"
     cis_level   = "2"
     cis_type    = "manual"
-    service     = "monitoring"
+    service     = "IBM/Monitoring"
   })
 }
 
@@ -85,7 +89,7 @@ control "cis_v100_3_5" {
     cis_item_id = "3.5"
     cis_level   = "2"
     cis_type    = "manual"
-    service     = "monitoring"
+    service     = "IBM/Monitoring"
   })
 }
 
@@ -99,7 +103,7 @@ control "cis_v100_3_6" {
     cis_item_id = "3.6"
     cis_level   = "2"
     cis_type    = "manual"
-    service     = "monitoring"
+    service     = "IBM/Monitoring"
   })
 }
 
@@ -113,6 +117,6 @@ control "cis_v100_3_7" {
     cis_item_id = "3.7"
     cis_level   = "2"
     cis_type    = "manual"
-    service     = "monitoring"
+    service     = "IBM/Monitoring"
   })
 }
