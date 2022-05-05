@@ -1,3 +1,9 @@
+## v0.4 [2022-05-05]
+
+_Enhancements_
+
+- Added `category`, `service`, and `type` tags to benchmarks and controls. ([#13](https://github.com/turbot/steampipe-mod-ibm-compliance/pull/13))
+
 ## v0.3 [2021-11-12]
 
 _Bug fixes_
