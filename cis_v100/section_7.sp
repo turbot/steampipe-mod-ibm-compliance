@@ -28,7 +28,7 @@ benchmark "cis_v100_7" {
   ]
 
   tags = merge(local.cis_v100_7_common_tags, {
-    type    = "Benchmark"
+    type = "Benchmark"
   })
 }
 
@@ -46,7 +46,7 @@ benchmark "cis_v100_7_1" {
   ]
 
   tags = merge(local.cis_v100_7_1_common_tags, {
-    type    = "Benchmark"
+    type = "Benchmark"
   })
 }
 

@@ -12,7 +12,7 @@ benchmark "cis_v100_9" {
   ]
 
   tags = merge(local.cis_v100_9_common_tags, {
-    service = "IBM/SecAdvisor"
+    service = "IBM/SCC"
     type    = "Benchmark"
   })
 }
@@ -27,6 +27,6 @@ control "cis_v100_9_1" {
     cis_item_id = "9.1"
     cis_level   = "1"
     cis_type    = "automated"
-    service     = "IBM/SecAdvisor"
+    service     = "IBM/SCC"
   })
 }
