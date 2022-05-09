@@ -6,9 +6,9 @@ repository: "https://github.com/turbot/steampipe-mod-ibm-compliance"
 
 Run individual configuration, compliance and security controls or full `CIS` compliance benchmarks across all your IBM accounts.
 
-<img src="https://raw.githubusercontent.com/turbot/steampipe-mod-ibm-compliance/add-benchmark-screenshots/docs/ibm_compliance_dashboard.png" width="50%" type="thumbnail"/>
-<img src="https://raw.githubusercontent.com/turbot/steampipe-mod-ibm-compliance/add-benchmark-screenshots/docs/ibm_cis_v100_dashboard.png" width="50%" type="thumbnail"/>
-<img src="https://raw.githubusercontent.com/turbot/steampipe-mod-ibm-compliance/add-benchmark-screenshots/docs/ibm_compliance_terminal.png" width="50%" type="thumbnail"/>
+<img src="https://raw.githubusercontent.com/turbot/steampipe-mod-ibm-compliance/main/docs/ibm_compliance_dashboard.png" width="50%" type="thumbnail"/>
+<img src="https://raw.githubusercontent.com/turbot/steampipe-mod-ibm-compliance/main/docs/ibm_cis_v100_dashboard.png" width="50%" type="thumbnail"/>
+<img src="https://raw.githubusercontent.com/turbot/steampipe-mod-ibm-compliance/main/docs/ibm_compliance_terminal.png" width="50%" type="thumbnail"/>
 
 ## References
 
