@@ -3,7 +3,7 @@
 60+ checks covering industry defined security best practices across all IBM Cloud regions. Includes support for v1.0.0 CIS benchmarks.
 
 Run checks in a dashboard:
-![image](https://raw.githubusercontent.com/turbot/steampipe-mod-ibm-compliance/main/docs/ibm_compliance_dashbaord.png)
+![image](https://raw.githubusercontent.com/turbot/steampipe-mod-ibm-compliance/main/docs/ibm_compliance_dashboard.png)
 
 Or in a terminal:
 ![image](https://raw.githubusercontent.com/turbot/steampipe-mod-ibm-compliance/main/docs/ibm_compliance_terminal.png)
