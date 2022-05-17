@@ -80,7 +80,7 @@ Different output formats are also available, for more information please see
 
 ### Credentials
 
-This mod uses the credentials configured in the [Steampipe IBM plugin](https://hub.steampipe.io/plugins/turbot/ibm).
+This mod uses the credentials configured in the [Steampipe IBM Cloud plugin](https://hub.steampipe.io/plugins/turbot/ibm).
 
 ### Configuration
 
@@ -97,4 +97,4 @@ Please see the [contribution guidelines](https://github.com/turbot/steampipe/blo
 Want to help but not sure where to start? Pick up one of the `help wanted` issues:
 
 - [Steampipe](https://github.com/turbot/steampipe/labels/help%20wanted)
-- [IBM Compliance Mod](https://github.com/turbot/steampipe-mod-ibm-compliance/labels/help%20wanted)
+- [IBM Cloud Compliance Mod](https://github.com/turbot/steampipe-mod-ibm-compliance/labels/help%20wanted)
