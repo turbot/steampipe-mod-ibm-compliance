@@ -1,3 +1,9 @@
+## v0.6 [2022-05-17]
+
+_Bug fixes_
+
+- Updated "IBM Cloud" references in README, index doc, and mod.sp. ([#20](https://github.com/turbot/steampipe-mod-ibm-compliance/pull/20))
+
 ## v0.5 [2022-05-09]
 
 _Enhancements_
