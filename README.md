@@ -1,4 +1,4 @@
-# IBM Cloud Compliance Scanning Tool
+# IBM Cloud Compliance Mod for Steampipe
 
 60+ checks covering industry defined security best practices across all IBM Cloud regions. Includes support for v1.0.0 CIS benchmarks.
 
