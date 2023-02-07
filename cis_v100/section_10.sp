@@ -21,7 +21,7 @@ control "cis_v100_10_1" {
   title         = "10.1 Ensure certificates generated through IBM Cloud Certificate Manager are automatically renewed before expiration"
   description   = "Monitor login activity of the account owner to prevent unauthorized usage of the privileged account."
   documentation = file("./cis_v100/docs/cis_v100_10_1.md")
-  sql           = query.certificate_with_auto_renew_enabled.sql
+  query         = query.certificate_with_auto_renew_enabled
 
   tags = merge(local.cis_v100_10_common_tags, {
     cis_item_id = "10.1"
