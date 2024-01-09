@@ -1,3 +1,9 @@
+## v0.7 [2024-01-09]
+
+_Enhancements_
+
+- Updated the controls to reference their query using `query =` rather than `sql =`. ([#25](https://github.com/turbot/steampipe-mod-ibm-compliance/pull/25))
+
 ## v0.6 [2022-05-17]
 
 _Bug fixes_
