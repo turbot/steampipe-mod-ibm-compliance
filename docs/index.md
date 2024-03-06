@@ -2,19 +2,16 @@
 
 Run individual configuration, compliance and security controls or full `CIS` compliance benchmarks across all your IBM Cloud accounts.
 
-<!-- <img src="https://raw.githubusercontent.com/turbot/steampipe-mod-ibm-compliance/main/docs/ibm_compliance_dashboard.png" width="50%" type="thumbnail"/>
+<img src="https://raw.githubusercontent.com/turbot/steampipe-mod-ibm-compliance/main/docs/ibm_compliance_dashboard.png" width="50%" type="thumbnail"/>
 <img src="https://raw.githubusercontent.com/turbot/steampipe-mod-ibm-compliance/main/docs/ibm_cis_v100_dashboard.png" width="50%" type="thumbnail"/>
-<img src="https://raw.githubusercontent.com/turbot/steampipe-mod-ibm-compliance/main/docs/ibm_compliance_terminal.png" width="50%" type="thumbnail"/> -->
-<img src="https://raw.githubusercontent.com/turbot/steampipe-mod-ibm-compliance/add-new-checks/docs/ibm_compliance_dashboard.png" width="50%" type="thumbnail"/>
-<img src="https://raw.githubusercontent.com/turbot/steampipe-mod-ibm-compliance/add-new-checks/docs/ibm_cis_v100_dashboard.png" width="50%" type="thumbnail"/>
-<img src="https://raw.githubusercontent.com/turbot/steampipe-mod-ibm-compliance/add-new-checks/docs/ibm_compliance_terminal.png" width="50%" type="thumbnail"/>
+<img src="https://raw.githubusercontent.com/turbot/steampipe-mod-ibm-compliance/main/docs/ibm_compliance_terminal.png" width="50%" type="thumbnail"/>
 
 ## Documentation
 
 - **[Benchmarks and controls →](https://hub.powerpipe.io/mods/turbot/ibm_compliance/controls)**
 - **[Named queries →](https://hub.powerpipe.io/mods/turbot/ibm_compliance/queries)**
 
-## Getting started
+## Getting Started
 
 ### Installation
 
@@ -70,7 +67,7 @@ powerpipe benchmark list
 Run a benchmark:
 
 ```sh
-powerpipe benchmark run steampipe check benchmark.cis_v100
+powerpipe benchmark run cis_v100
 ```
 
 Different output formats are also available, for more information please see
